@@ -9,8 +9,12 @@ h2{font-size:clamp(3rem,5vw,5.5rem)}
 em{font-weight:600;color:var(--rose)}
 a{color:inherit;text-decoration:none}
 .navbar{height:82px;display:flex;align-items:center;justify-content:space-between;padding:0 max(7vw,32px);position:absolute;top:0;width:100%;z-index:5}
-.logo{font-size:1.6rem;font-weight:700;letter-spacing:-.08em}
-.logo span{color:var(--rose)}
+.project-logo {
+  font: inherit;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -.08em;
+}
 nav{display:flex;gap:27px;font-size:.85rem}
 nav a{opacity:.58;transition:.2s}
 nav a:hover,nav a.active{opacity:1;color:var(--rose)}
@@ -92,10 +96,25 @@ nav a:hover,nav a.active{opacity:1;color:var(--rose)}
 .project-two em{color:#fff1ee}
 .cake{font-size:8rem;position:absolute;bottom:24px;right:24px}
 .dots{position:absolute;bottom:25px;letter-spacing:6px}
-.project-three .project-image{background:#e5ded1;padding:28px}
+.project-three .project-image {
+  background: linear-gradient(135deg, #f8dfe3, #f3cbd1);
+  padding: 28px;
+}
 .app-card{height:100%;background:#fffdf8;padding:28px;display:flex;flex-direction:column;color:#4c5a4d}
 .app-card span{font-size:2.4rem}
-.app-card b{font-family:"Playfair Display";font-size:2.6rem;line-height:.9;margin-top:auto}
+.app-card div {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #302827;
+}
+
+.app-card span {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
 .app-card i{font-size:.62rem;margin-top:20px}
 .leaf{position:absolute;font-size:8rem;color:#829281;right:-14px;top:6px;transform:rotate(-28deg)}
 .project-meta{display:flex;justify-content:space-between;padding-top:16px}
@@ -118,13 +137,28 @@ nav a:hover,nav a.active{opacity:1;color:var(--rose)}
 .qoder-card img{border-radius:10px}
 .contact{text-align:center;background:#f8d9df;padding-bottom:30px;overflow:hidden}
 .contact .eyebrow{justify-content:center}
-.contact h2{position:relative;z-index:2}
+.contact h2 em {
+  color: #a64d79;
+}.contact .eyebrow {
+  color: #b84f6a;
+}
 .contact-links{max-width:920px;margin:42px auto 105px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;text-align:left}
 .contact-item{min-height:116px;background:#fff8f8;border:1px solid #edc2ca;padding:16px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .25s ease,box-shadow .25s ease}
 .contact-item:hover{transform:translateY(-6px);box-shadow:7px 8px 0 #e9aebb}
 .contact-item svg{width:21px;height:21px;fill:none;stroke:var(--rose);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:11px}
 .contact-item span{font-size:.62rem;text-transform:uppercase;letter-spacing:.14em;color:#967075;font-weight:700}
-.contact-item b{font-family:"Playfair Display";font-size:.95rem;font-weight:600;letter-spacing:-.02em;margin-top:4px}
+.contact-item b {
+  font-family: "Playfair Display", serif;
+  font-size: .95rem;
+  font-weight: 600;
+  letter-spacing: -.02em;
+  margin-top: 4px;
+  color: var(--ink);
+}
+
+.contact-item span {
+  color: var(--rose);
+}
 .ribbon-contact{left:50%;top:0;transform:translate(-50%,-30%) rotate(-12deg) scale(1.15);opacity:.75}
 footer{border-top:1px solid #d8aeb5;padding-top:23px;display:flex;justify-content:space-between;text-align:left;align-items:center;font-size:.68rem}
 footer p{color:#846b6e}
@@ -215,12 +249,10 @@ footer div{justify-content:center}
 
 /* ==================== SECTION SKILLS (ESTETIK PINK & HIASAN) ==================== */
 .skills.section {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  /* Mengubah background halaman Skills menjadi pink pastel yang lembut dan hangat */
-  background: radial-gradient(circle at 10% 20%, rgba(255, 240, 245, 0.7) 0%, rgba(255, 255, 255, 1) 90%);
-  position: relative;
-  overflow: hidden;
+  background: linear-gradient(135deg, #f9b3c6, #fcd4df);
+  .skills h2 em {
+  color: #fff;
+}
 }
 
 /* --- HIASAN ESTETIK DI BACKGROUND --- */
@@ -375,7 +407,7 @@ footer div{justify-content:center}
 .skill-card:hover .skill-name {
   color: #d13b7d; /* Berubah menjadi pink gelap yang tajam dan tetap terbaca saat di-hover */
 }
-}
+
 
 /* Animasi & Efek Hover Kotak (Sentuhan Pink) */
 .skill-card:hover {
@@ -424,3 +456,4 @@ footer div{justify-content:center}
 .skill-card:hover .skill-icon-container {
   transform: translateY(-5px) scale(1.15);
 }
+
